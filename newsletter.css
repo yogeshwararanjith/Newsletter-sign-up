@@ -13,11 +13,10 @@ body main {
   justify-content: space-between;
   border-radius: 22px;
   background-color: hsl(0, 0%, 100%);
-  width: 700px;
-  height: 450px;
+  height: 500px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-body section {
+body main .sign-up-form {
   justify-content: center;
   margin-left: 3rem;
   margin-right: 3rem;
@@ -26,38 +25,187 @@ body section {
   margin-bottom: 4rem;
   color: hsl(235, 18%, 26%);
   font-weight: 400;
+  display: block;
 }
-body section h1 {
+body main .sign-up-form h1 {
   font-size: 45px;
   font-weight: 700;
   margin: 0;
   color: hsl(234, 29%, 20%);
 }
-body section ul {
-  color: hsl(234, 29%, 20%);
+body main .sign-up-form ul {
+  color: hsl(235, 18%, 26%);
   padding-left: 20px;
+  list-style-image: url("assets/images/icon-list.svg");
   font-size: 13px;
   font-weight: 400;
 }
-body section ul li {
+body main .sign-up-form ul li {
   position: relative;
   padding-bottom: 10px;
+  list-style-type: none;
 }
-body section ul li::before {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-image: url("assets/images/icon-list.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
+body main .sign-up-form form {
+  display: flex;
+  flex-direction: column;
 }
-body aside {
+body main .sign-up-form form label {
+  padding-bottom: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+}
+body main .sign-up-form form label .error-mail {
+  color: hsl(4, 100%, 67%);
+  display: none;
+}
+body main .sign-up-form form input {
+  border: 1px solid hsl(231, 7%, 60%);
+  border-radius: 5px;
+  font-weight: 400;
+  padding: 1rem;
+  margin-bottom: 5px;
+}
+body main .sign-up-form form .btn1 {
+  margin-top: 15px;
+  padding: 1rem;
+  border-radius: 7px;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  border: none;
+  outline: none;
+}
+body main .sign-up-form form .btn1:hover {
+  background-color: hsl(4, 100%, 67%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+body main aside {
   margin: 1rem;
+  display: flex;
+  flex-direction: column;
 }
-body aside img {
-  width: 280px;
+body main aside img {
+  height: 100%;
+}
+body .success-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-height: 350px;
+  border-radius: 22px;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+body .success-box .success-message {
+  max-width: 300px;
   height: auto;
+  justify-content: center;
+  margin: 2rem;
+  color: hsl(235, 18%, 26%);
+  font-weight: 400;
+  display: none;
+}
+body .success-box .success-message img {
+  margin-bottom: 1rem;
+  width: 40px;
+  height: 40px;
+}
+body .success-box .success-message h1 {
+  font-size: 45px;
+  font-weight: 700;
+  margin: 0;
+  color: hsl(234, 29%, 20%);
+}
+body .success-box .success-message .bold {
+  font-weight: 700;
+}
+body .success-box .success-message .btn2 {
+  margin-top: 15px;
+  padding: 1rem;
+  border-radius: 7px;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  border: none;
+  outline: none;
+}
+body .success-box .success-message .btn2:hover {
+  background-color: hsl(4, 100%, 67%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media (max-width: 750px) {
+  body {
+    margin: 0;
+    background-color: transparent;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto;
+  }
+  body main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: 0 0 0 transparent;
+  }
+  body main aside {
+    order: -1;
+    width: 100%;
+  }
+  body main aside img {
+    border-radius: 0 0;
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+  }
+  body .success-box {
+    box-shadow: 0 0 0 transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .success-box .success-message {
+    height: auto;
+    justify-content: center;
+    margin: 2rem;
+    color: hsl(235, 18%, 26%);
+    font-weight: 400;
+    display: none;
+  }
+  body .success-box .success-message img {
+    margin-bottom: 1rem;
+    width: 40px;
+    height: 40px;
+  }
+  body .success-box .success-message h1 {
+    font-size: 45px;
+    font-weight: 700;
+    margin: 0;
+    color: hsl(234, 29%, 20%);
+  }
+  body .success-box .success-message .bold {
+    font-weight: 700;
+  }
+  body .success-box .success-message .btn2 {
+    margin-top: 15px;
+    padding: 1rem;
+    border-radius: 7px;
+    background-color: hsl(234, 29%, 20%);
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    border: none;
+    outline: none;
+  }
+  body .success-box .success-message .btn2:hover {
+    background-color: hsl(4, 100%, 67%);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
 }
 
 /*# sourceMappingURL=newsletter.css.map */
