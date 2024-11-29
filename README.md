@@ -22,11 +22,11 @@ Users should be able to:
 
 # Screenshots
 
-![Desktop signup](image.png)
-![Desktop Error State](image-1.png)
-![Desktop success state](image-2.png)
-![Mobile signup](image-3.png)
-![Mobile success state](image-4.png)
+![Desktop signup](/Screenshots/image.png)
+![Desktop Error State](/Screenshots/image-1.png)
+![Desktop success state](/Screenshots/image-2.png)
+![Mobile signup](/Screenshots/image-3.png)
+![Mobile success state](/Screenshots/image-4.png)
 
 # Built with
 
